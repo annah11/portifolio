@@ -1,29 +1,30 @@
-
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Label } from '@/components/ui/label';
-import { Mail, Phone, MapPin, Send, Github, Linkedin } from 'lucide-react';
-import { useToast } from '@/hooks/use-toast';
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import { Mail, Phone, MapPin, Send, Github, Linkedin } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
@@ -33,18 +34,18 @@ const Contact = () => {
 
     // Simulate form submission
     try {
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+
       toast({
         title: "Message sent successfully!",
         description: "Thank you for your message. I'll get back to you soon.",
       });
-      
+
       setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
       });
     } catch (error) {
       toast({
@@ -60,43 +61,43 @@ const Contact = () => {
   const contactInfo = [
     {
       icon: Mail,
-      label: 'Email',
-      value: 'john.doe@email.com',
-      href: 'mailto:john.doe@email.com'
+      label: "Email",
+      value: "hanamesfin67@gmail.com",
+      href: "mailto:hanamesfin67@gmail.com",
     },
     {
       icon: Phone,
-      label: 'Phone',
-      value: '+1 (555) 123-4567',
-      href: 'tel:+15551234567'
+      label: "Phone",
+      value: "+251-977246553",
+      href: "tel:+15551234567",
     },
     {
       icon: MapPin,
-      label: 'Location',
-      value: 'San Francisco, CA',
-      href: '#'
-    }
+      label: "Location",
+      value: " Addis Abeba , AA",
+      href: "#",
+    },
   ];
 
   const socialLinks = [
     {
       icon: Github,
-      label: 'GitHub',
-      href: 'https://github.com',
-      color: 'hover:text-gray-900 dark:hover:text-gray-100'
+      label: "GitHub",
+      href: "https://github.com/annah11",
+      color: "hover:text-gray-900 dark:hover:text-gray-100",
     },
     {
       icon: Linkedin,
-      label: 'LinkedIn',
-      href: 'https://linkedin.com',
-      color: 'hover:text-blue-600'
+      label: "LinkedIn",
+      href: "https://www.linkedin.com/in/hana-mesfin-bb737235a/",
+      color: "hover:text-blue-600",
     },
     {
       icon: Mail,
-      label: 'Email',
-      href: 'mailto:john.doe@email.com',
-      color: 'hover:text-red-600'
-    }
+      label: "Email",
+      href: "hanamesfin67@gmail.com",
+      color: "hover:text-red-600",
+    },
   ];
 
   return (
@@ -111,7 +112,8 @@ const Contact = () => {
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">Get In Touch</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            I'm always open to discussing new opportunities and interesting projects.
+            I'm always open to discussing new opportunities and interesting
+            projects.
           </p>
         </motion.div>
 
@@ -154,7 +156,7 @@ const Contact = () => {
                       />
                     </div>
                   </div>
-                  
+
                   <div className="space-y-2">
                     <Label htmlFor="subject">Subject</Label>
                     <Input
@@ -166,7 +168,7 @@ const Contact = () => {
                       placeholder="What's this about?"
                     />
                   </div>
-                  
+
                   <div className="space-y-2">
                     <Label htmlFor="message">Message</Label>
                     <Textarea
@@ -179,14 +181,14 @@ const Contact = () => {
                       rows={6}
                     />
                   </div>
-                  
+
                   <Button
                     type="submit"
                     className="w-full"
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? (
-                      'Sending...'
+                      "Sending..."
                     ) : (
                       <>
                         <Send className="mr-2 h-4 w-4" />
@@ -273,9 +275,12 @@ const Contact = () => {
             <Card>
               <CardContent className="p-6">
                 <div className="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg p-8 text-center">
-                  <h3 className="text-xl font-semibold mb-2">Let's Work Together</h3>
+                  <h3 className="text-xl font-semibold mb-2">
+                    Let's Work Together
+                  </h3>
                   <p className="text-muted-foreground">
-                    I'm always excited to take on new challenges and collaborate on innovative projects.
+                    I'm always excited to take on new challenges and collaborate
+                    on innovative projects.
                   </p>
                 </div>
               </CardContent>
