@@ -1,49 +1,108 @@
-
-import { motion } from 'framer-motion';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Progress } from '@/components/ui/progress';
+import { motion } from "framer-motion";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Progress } from "@/components/ui/progress";
 
 const Skills = () => {
   const skillCategories = [
     {
-      title: 'Frontend Development',
+      title: "Frontend Development",
       skills: [
-        { name: 'React/Next.js', level: 95 },
-        { name: 'TypeScript', level: 90 },
-        { name: 'JavaScript', level: 95 },
-        { name: 'HTML/CSS', level: 90 },
-        { name: 'Tailwind CSS', level: 85 }
-      ]
+        {
+          name: "React/Next.js",
+          level: 95,
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+        },
+        {
+          name: "TypeScript",
+          level: 90,
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+        },
+        {
+          name: "JavaScript",
+          level: 95,
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+        },
+        {
+          name: "HTML/CSS",
+          level: 90,
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+        },
+        {
+          name: "Tailwind CSS",
+          level: 85,
+          icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-plain.svg",
+        },
+      ],
     },
     {
-      title: 'Backend Development',
+      title: "Backend Development",
       skills: [
-        { name: 'Node.js', level: 85 },
-        { name: 'Python', level: 80 },
-        { name: 'PostgreSQL', level: 75 },
-        { name: 'MongoDB', level: 80 },
-        { name: 'REST APIs', level: 90 }
-      ]
+        {
+          name: "Node.js",
+          level: 85,
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+        },
+        {
+          name: "Python",
+          level: 80,
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+        },
+        {
+          name: "PostgreSQL",
+          level: 75,
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+        },
+        {
+          name: "MongoDB",
+          level: 80,
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+        },
+        {
+          name: "REST APIs",
+          level: 90,
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/api/api-original.svg",
+        },
+      ],
     },
     {
-      title: 'Tools & Technologies',
+      title: "Tools & Technologies",
       skills: [
-        { name: 'Git/GitHub', level: 90 },
-        { name: 'Docker', level: 75 },
-        { name: 'AWS', level: 70 },
-        { name: 'Jest/Testing', level: 80 },
-        { name: 'Figma', level: 85 }
-      ]
-    }
+        {
+          name: "Git/GitHub",
+          level: 90,
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+        },
+        {
+          name: "Docker",
+          level: 75,
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+        },
+        {
+          name: "AWS",
+          level: 70,
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg",
+        },
+        {
+          name: "Jest/Testing",
+          level: 80,
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg",
+        },
+        {
+          name: "Figma",
+          level: 85,
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
+        },
+      ],
+    },
   ];
 
   const softSkills = [
-    'Problem Solving',
-    'Team Leadership',
-    'Communication',
-    'Project Management',
-    'Critical Thinking',
-    'Adaptability'
+    "Problem Solving",
+    "Team Leadership",
+    "Communication",
+    "Project Management",
+    "Critical Thinking",
+    "Adaptability",
   ];
 
   return (
@@ -56,7 +115,9 @@ const Skills = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">Skills & Expertise</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            Skills & Expertise
+          </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Technical skills and tools I use to bring ideas to life.
           </p>
@@ -74,7 +135,9 @@ const Skills = () => {
             >
               <Card className="h-full">
                 <CardHeader>
-                  <CardTitle className="text-xl text-center">{category.title}</CardTitle>
+                  <CardTitle className="text-xl text-center">
+                    {category.title}
+                  </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-6">
                   {category.skills.map((skill, skillIndex) => (
@@ -87,13 +150,14 @@ const Skills = () => {
                       className="space-y-2"
                     >
                       <div className="flex justify-between items-center">
-                        <span className="text-sm font-medium">{skill.name}</span>
-                        <span className="text-sm text-muted-foreground">{skill.level}%</span>
+                        <span className="text-sm font-medium">
+                          {skill.name}
+                        </span>
+                        <span className="text-sm text-muted-foreground">
+                          {skill.level}%
+                        </span>
                       </div>
-                      <Progress 
-                        value={skill.level} 
-                        className="h-2"
-                      />
+                      <Progress value={skill.level} className="h-2" />
                     </motion.div>
                   ))}
                 </CardContent>
@@ -111,7 +175,9 @@ const Skills = () => {
         >
           <Card>
             <CardHeader>
-              <CardTitle className="text-2xl text-center">Soft Skills</CardTitle>
+              <CardTitle className="text-2xl text-center">
+                Soft Skills
+              </CardTitle>
             </CardHeader>
             <CardContent>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-4">

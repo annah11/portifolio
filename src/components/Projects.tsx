@@ -44,15 +44,16 @@ const Projects = () => {
     },
     {
       id: 3,
-      title: "Data Analytics Dashboard",
-      description: "Interactive dashboard for data visualization and analytics",
+      title: "Smart Traffic Dashboard",
+      description:
+        "Interactive dashboard for smart traffic management and analytics",
       longDescription:
-        "Created an interactive analytics dashboard with complex data visualizations, real-time data processing, and customizable widgets. Features include chart interactions, data filtering, and export capabilities.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+        "Created an interactive smart traffic dashboard with complex data visualizations, real-time image processing, and customizable widgets. Features include chart interactions, data filtering, and export capabilities.",
+      image: "/img/dashboard.png",
       category: "frontend",
-      tech: ["React", "D3.js", "Python", "Flask", "PostgreSQL"],
-      github: "https://github.com",
-      demo: "https://demo.com",
+      tech: ["React", "D3.js", "Python", "NExt", "firebase"],
+      github: "https://github.com/annah11/smart-traffic-main",
+      demo: "https://smartraffic.netlify.app",
     },
     {
       id: 4,
